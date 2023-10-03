@@ -4,16 +4,19 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-12">
-        <a href="" class="float-sm-start">
+    <div class="col-md-12 list-group">
+        <a href="" class="list-group-item" *ngFor="let item of recipes">
             <div class="float-sm-start">
-                <h4>
-                    Recipe Name
+                <h4 class="list-group-item-heading">
+                    {{item.name}}
                 </h4>
-                <p>decription</p>
+                <p class="list-group-item-text ">item.description</p>
             </div>
             <span class="float-sm-end">
-                <img src="..." alt="">
+                <img 
+                class="img-fluid"
+                style="max-height: 50px;"
+                 src="{{item.imagePath}}" alt="">
             </span>
         </a>
     </div>
